@@ -3,7 +3,6 @@ package org.example.stepDefinitions;
 import org.example.hooks.Hooks;
 import org.example.pages.LoginPage;
 import org.example.pages.MyAccountPage;
-import io.cucumber.java.PendingException;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Entonces;
 import org.testng.Assert;
