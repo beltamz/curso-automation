@@ -23,7 +23,7 @@ public class LoginTest extends BaseTest {
         homePage.goToLogin();
 
         // 4. Hacer el login
-        loginPage.login("cesar@gmail.com", "123456");
+        loginPage.login("prueba123@prueba.com", "prueba");
 
         // 5. Validación
         Assert.assertTrue(myAccountPage.titleIsDisplayed(), "El titulo no es visible");
@@ -41,7 +41,7 @@ public class LoginTest extends BaseTest {
         homePage.goToLogin();
 
         // 4. Hacer el login
-        loginPage.login("cesar@gmail.com", "56465");
+        loginPage.login("prueba123@prueba.com", "56465");
 
         // 5. Validación
         Assert.assertTrue(loginPage.errorMessageIsDisplayed(), "Mensaje de error no visible");
