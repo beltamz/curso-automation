@@ -37,8 +37,8 @@ public class AddProductToCartDefinitions {
         String password = Hooks.getProperty("password");
         loginPage.login(username, password);
 
-        // Valido que la sesión se inicio correctamente
-        Assert.assertTrue(myAccountPage.titleIsDisplayed(), "El usuario no pudo iniciar sesión correctamente");
+        // Valido que la sesion se inicio correctamente
+        Assert.assertTrue(myAccountPage.titleIsDisplayed(), "El usuario no pudo iniciar sesion correctamente");
     }
 
     @Cuando("el usuario agrega un producto al carrito")
@@ -48,7 +48,7 @@ public class AddProductToCartDefinitions {
         // 1. Click en el boton "Cameras"
         productsPage.clickCamerasBtn();
 
-        // 2. Selecciono la cámara Canon
+        // 2. Selecciono la camara Canon
         productsPage.clickCanonCameraBtn();
 
         // 3. Selecciono el color del producto (Red)
@@ -57,19 +57,18 @@ public class AddProductToCartDefinitions {
         // 4. Indico la cantidad a comprar (3)
         productsPage.setQuantity("3");
 
-        // 5. Agrego al carrito
+        // 5. Lo agrego al carrito
         productsPage.clickAddToCartBtn();
 
-        // 6. Abrir mini carrito y click en "View Cart"
+        // 6. Abro el mini carrito y hago click en "View Cart"
         CartPage cartPage = productsPage.clickViewCartBtn();
 
-        // 7. Guardar cartPage para usar en el Then (si usás variable de clase)
+        // 7. Guardar cartPage para usar en el Entonces
         this.cartPage = cartPage;
     }
 
     @Entonces("se verifica que el producto aparezca en el carrito")
     public void seVerificaQueElProductoAparezcaEnElCarrito() {
-        // Aquí va el código para validar el carrito
         Assert.assertTrue(cartPage.isProductInCart("Canon EOS 5D", "3", "$80.00"), "El producto no coincide con lo esperado");
     }
 }

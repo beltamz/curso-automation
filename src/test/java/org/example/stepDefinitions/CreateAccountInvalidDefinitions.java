@@ -1,7 +1,6 @@
 package org.example.stepDefinitions;
 import org.example.hooks.Hooks;
 import org.example.pages.CreateAccountPage;
-import org.example.pages.CreatedAccountPage;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Entonces;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -15,6 +14,7 @@ public class CreateAccountInvalidDefinitions {
         this.createAccountPage = new CreateAccountPage(Hooks.getDriver());
     }
 
+    //Dejo vacio el campo nombre
     @Cuando("envia el formulario de registro dejando algunos campos vacios")
     public void enviaFormularioConCampoNombreVacio() {
 
@@ -29,6 +29,6 @@ public class CreateAccountInvalidDefinitions {
 
     @Entonces("se muestra un mensaje de error al crear la cuenta")
     public void seMuestraErrorAlCrearLaCuenta() {
-        Assert.assertTrue(createAccountPage.isFirstNameErrorDisplayed(), "No se mostro el error que falta completar First Name");
+        Assert.assertTrue(createAccountPage.isFirstNameErrorDisplayed(), "No se muestra el error : Falta completar First Name");
     }
 }

@@ -2,7 +2,6 @@ package org.example.stepDefinitions;
 
 import org.example.hooks.Hooks;
 import org.example.pages.HomePage;
-import io.cucumber.java.PendingException;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
@@ -25,7 +24,7 @@ public class HomeDefinitions {
 
     @Entonces("la pantalla de la home se muestra correctamente")
     public void laPantallaDeLaHomeSeMuestraCorrectamente() {
-        // 2. Validar elementos de la home
+        // Validamos elementos de la home
         Assert.assertTrue(homePage.searchIsDisplayed(), "Search input no visible");
         Assert.assertTrue(homePage.carrouselIsDisplayed(), "Carrousel no visible");
         Assert.assertTrue(homePage.navbarIsDisplayed(), "Navbar no visible");

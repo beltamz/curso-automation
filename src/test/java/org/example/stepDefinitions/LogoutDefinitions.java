@@ -23,19 +23,19 @@ public class LogoutDefinitions {
     @Dado("que el usuario ya tiene una sesion iniciada")
     public void usuarioConSesionIniciada() {
         WebDriver driver = Hooks.getDriver();
-        driver.get(Hooks.getProperty("url")); // Home
+        driver.get(Hooks.getProperty("url"));
 
-        // Abrir el dropdown My Account y hacer click en Login
+        // Abro el dropdown My Account y hago click en Login
         myAccountPage.clickMyAccountDropdown();
         myAccountPage.clickLogin();
 
-        // Hacer login
+        // Nos logueamos
         String username = Hooks.getProperty("username");
         String password = Hooks.getProperty("password");
         loginPage.login(username, password);
 
-        // Validar que la sesión se inició correctamente
-        Assert.assertTrue(myAccountPage.titleIsDisplayed(), "El usuario no pudo iniciar sesión correctamente");
+        // Validamos que la sesion se inicio correctamente
+        Assert.assertTrue(myAccountPage.titleIsDisplayed(), "El usuario no pudo iniciar sesion correctamente");
     }
 
     @Cuando("el usuario se intenta desloguear")
