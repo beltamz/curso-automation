@@ -13,6 +13,4 @@ public class LogoutPage extends BasePage {
     public boolean logOutTextIsDisplayed() {
         return isDisplayed(textLogout);
     }
-
-
 }

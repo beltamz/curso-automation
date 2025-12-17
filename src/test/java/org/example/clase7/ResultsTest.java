@@ -13,13 +13,13 @@ public class ResultsTest extends BaseTest {
         HomePage homePage = new HomePage(getDriver());
         ResultsPage resultsPage= new ResultsPage(getDriver());
 
-        // 1. Abrir la pagina
+        // 1. Abrimos la pagina
         getDriver().get("https://opencart.abstracta.us/");
 
-        // 2. Realizar la busqueda
+        // 2. Realizamos la busqueda
         homePage.search("iphone");
 
-        // 3. Verificar el esperado (assertion)
+        // 3. Verificamos el esperado
         Assert.assertEquals(resultsPage.getTitle(), "Search - iphone", "Los titulos no coinciden");
     }
 }

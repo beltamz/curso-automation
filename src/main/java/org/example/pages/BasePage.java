@@ -38,6 +38,7 @@ public class BasePage {
         element.click();
     }
 
+    //Metodo para seleccionar una opcion de un desplegable
     public void selectByVisibleText(By locator, String visibleText) {
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
         Select select = new Select(element);

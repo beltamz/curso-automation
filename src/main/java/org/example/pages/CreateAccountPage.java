@@ -2,7 +2,6 @@ package org.example.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CreateAccountPage extends BasePage {
     private By firstName = By.id("input-firstname");
@@ -37,6 +36,7 @@ public class CreateAccountPage extends BasePage {
         click(continueBtn);
     }
 
+    //Metodo para saber si me muestra el error al dejar el campo nombre vacio
    public boolean isFirstNameErrorDisplayed() {
        return isDisplayed(firstNameError);
    }

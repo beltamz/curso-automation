@@ -37,10 +37,10 @@ public class ProductsPage extends BasePage{
         click(addToCartBtn);
     }
 
+    //Accedo al carrito
     public CartPage clickViewCartBtn() {
         click(cartBtn);
-        clickOnLyPresence(viewCartBtn); // espera a que el link esté presente y hace click
+        clickOnLyPresence(viewCartBtn);
         return new CartPage(driver);
     }
-
 }

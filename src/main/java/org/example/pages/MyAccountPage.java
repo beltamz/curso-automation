@@ -14,12 +14,12 @@ public class MyAccountPage extends BasePage {
         super(driver);
     }
 
-    // Validar título de My Account
+    // Valido el titulo de "My Account"
     public boolean titleIsDisplayed() {
         return isDisplayed(title);
     }
 
-    // Click en My Account > Login
+    // Click en My Account --> Login
     public void clickMyAccountDropdown() {
         click(myAccountDropdown);
     }
@@ -28,7 +28,7 @@ public class MyAccountPage extends BasePage {
         click(loginLink);
     }
 
-    // Click en My Account > Logout
+    // Click en My Account --> Logout
     public LogoutPage clickLogoutButton() {
         click(myAccountDropdown);
         click(logoutBtn);
